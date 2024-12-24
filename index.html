@@ -7,12 +7,47 @@
         <meta property="og:url" content="https://rockforddev.com" />
         <meta property="og:image" content="https://rockforddev.com/img/group-photo.jpg" />
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico"/>
+				<style>
+/**
+Color palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
+*/
+
+body {
+	font-family: "Fira Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+	color: #219EBC;
+}
+
+.rd-hero {
+	background: #023047 url('/img/group-photo.jpg') no-repeat center;
+	background-size: cover;
+	padding: 10em 10em;
+}
+
+.rd-hero-content {
+	text-align: center;
+	padding: 5em 5em;
+	background: rgba(2, 48, 71, 75%);
+	border-radius: 3em;
+}
+
+.rd-hero-content h1 {
+	color: #FB8500;
+}
+
+.rd-hero-content p {
+	color: #FFB703;
+}
+				</style>
     </head>
     <body>
-        <div class="rd-hero" style='text-align:center'>
-            <img src="img/group-photo.jpg" width="500px" alt="Group photo taken on a random day">
-            <h1>Rockford Dev</h1>
-            <p>A local meetup for Software Developers in Rockford IL</p>
+        <div class="rd-hero">
+						<div class="rd-hero-content">
+							<h1>Rockford Dev</h1>
+							<p>A local meetup for Software Developers in Rockford IL</p>
+						</div>
         </div>
         <div class="rd-main-links">
             <ul>
