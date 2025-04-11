@@ -1,84 +1,62 @@
  <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rockford Dev</title>
-        <!-- OG Data -->
-        <meta property="og:title" content="Rockford Dev" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rockforddev.com" />
-        <meta property="og:image" content="https://rockforddev.com/img/group-photo.jpg" />
-        <link rel="icon" type="image/x-icon" href="/img/favicon.ico"/>
-                <style>
-/**
-Color palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
-*/
 
-body {
-    font-family: "Fira Sans", sans-serif;
-}
+<head>
+    <title>Rockford Dev</title>
+    <!-- OG Data -->
+    <meta property="og:title" content="Rockford Dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rockforddev.com" />
+    <meta property="og:image" content="https://rockforddev.com/img/group-photo.jpg" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
 
-h1, h2, h3, h4 {
-    color: #219EBC;
-}
+<body>
 
-.rd-hero {
-    background: #023047 url('/img/group-photo.jpg') no-repeat center;
-    background-size: cover;
-    padding: 10em 10em;
-}
-
-.rd-hero-content {
-    text-align: center;
-    padding: 5em 5em;
-    background: rgba(2, 48, 71, 75%);
-    border-radius: 3em;
-}
-
-.rd-hero-content h1 {
-    color: #FB8500;
-}
-
-.rd-hero-content p {
-    color: #FFB703;
-}
-
-.rd-main-links ul {
-    text-align: center;
-}
-
-
-.rd-main-links ul li {
-    display: inline-block;
-    width: 30%;
-}
-
-.rd-main-links ul li a {
-    color: #FFB703;
-}
-
-.rd-main-links ul li a:visited {
-    color: #FB8500;
-}
-
-.rd-main-links ul li .rd-link-icon {
-    display: block;
-}
-
-.rd-main-links ul li .rd-link-text {
-    display: block;
-    font-size: 1.5em;
-}
-
-
-                </style>
-    </head>
-    <body>
-        <div class="rd-hero">
-                        <div class="rd-hero-content">
-                            <h1>Rockford Dev</h1>
-                            <p>A local meetup for Software Developers in Rockford IL</p>
-                        </div>
+    <header id="main_header">
+        <h1 id="header_title">
+            Rockford Dev
+        </h1>
+        <div id="header_social_media">
+            <a class="social_media_link" href="https://discord.gg/qdpcuQhd">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a class="social_media_link" href="https://github.com/RockfordDev">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="social_media_link" href="https://groups.google.com/g/rockforddev">
+                <i class="fas fa-user-friends"></i>
+            </a>
         </div>
+    </header>
+
+    <aside id="sidebar">
+        <h3 id="upcoming_events_header">
+            Upcoming Events
+        </h3>
+        <ul>
+            <li>
+                <h4>February 19th 2025</h4>
+                <a
+                    href="https://www.eventbrite.com/e/rockford-dev-february-meetup-how-i-drew-my-family-tree-tickets-1234938918549">
+                    Rockford Dev February Meetup - How I Drew my Family Tree
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+
+
+    <article id="main_content">
+
+
+        <div id="banner_picture_holder">
+            <img id="banner_picture" src="/img/group-photo.jpg" alt="">
+        </div>
+
         <div class="rd-main-links">
             <ul>
                 <li>
@@ -135,10 +113,18 @@ h1, h2, h3, h4 {
                 <li>2025-02-19: <a href="https://www.eventbrite.com/e/rockford-dev-february-meetup-how-i-drew-my-family-tree-tickets-1234938918549">Rockford Dev February Meetup - How I Drew my Family Tree</a></li>
             </ul>
         </div>
-        <div class="rd-section">
+        
+        <div id="about_us">
             <h2>About Us</h2>
-            <p>Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in 2024, this group strives to promote professional development and technical learning. We meet on the third Wednesday of every month at 6PM, on the second floor of the Rockford Public Library Main branch, in the WREX classroom.</p>
-            <p>Rockford Dev meetups often include an educational lecture or topic of discussion. Some of our past lecture topics have included:</p>
+            <p>Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in
+                2024,
+                this group strives to promote professional development and technical learning. We meet on the third
+                Wednesday of every month at 6PM, on the second floor of the Rockford Public Library Main branch, in the
+                WREX
+                classroom.</p>
+            <p>Rockford Dev meetups often include an educational lecture or topic of discussion. Some of our past
+                lecture
+                topics have included:</p>
             <ul>
                 <li>GraphVis</li>
                 <li>Duplicate customer accounts</li>
@@ -147,7 +133,14 @@ h1, h2, h3, h4 {
                 <li>Creating this website</li>
             </ul>
 
-            <p>If you would like to host a lecture, please email <a href="mailto:rockforddev@googlegroups.com">rockforddev@googlegroups.com</a> with a suggested outline.</p>
+            <p>If you would like to host a lecture, please email
+                <a href="mailto:rockforddev@googlegroups.com">rockforddev@googlegroups.com</a> with a suggested outline.
+            </p>
         </div>
-    </body>
+    </article>
+    <footer>
+        
+    </footer>
+</body>
+
 </html>
