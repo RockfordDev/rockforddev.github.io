@@ -83,17 +83,52 @@ img.rd-responsive-img {
 
 /* Small screens (phones) */
 @media only screen and (min-width: 576px) {
+    body {
+        font-size: 30px;
+    }
 }
 
 /* Medium screens (tablets) */
 @media only screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+        margin: 0em 5em;
+    }
+
+    #rd-group-photo {
+        float: right;
+        width: 20em;
+        margin-bottom: 2em;
+    }
 }
 
 /* Large screens (desktops, laptops) */
 @media only screen and (min-width: 992px) {
+    body {
+        font-size: 20px;
+        margin: 0em auto;
+        max-width: 90%;
+    }
+
+    #rd-group-photo {
+        float: right;
+        width: 20em;
+        margin-bottom: 2em;
+    }
 }
 
 /* Extra large screens (large desktops) */
 @media only screen and (min-width: 1200px) {
+    body {
+        font-size: 15px;
+        margin: 0em auto;
+        max-width: 1200px;
+    }
+
+    #rd-group-photo {
+        float: right;
+        width: 20em;
+        margin-bottom: 2em;
+    }
 }
 
