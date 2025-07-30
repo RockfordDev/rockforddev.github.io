@@ -1,0 +1,99 @@
+/**
+Color palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
+*/
+
+/* Base styles (applies to all screen sizes) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 40px;
+}
+
+h1, h2, h3, h4 {
+    color: #219EBC;
+}
+
+.rd-hero {
+    background: #023047;
+}
+
+.rd-hero-content {
+    text-align: center;
+    padding: 5em 2em;
+}
+
+.rd-hero-content h1 {
+    color: #FB8500;
+}
+
+.rd-hero-content p {
+    color: #FFB703;
+}
+
+.rd-main-links ul {
+    text-align: center;
+    padding: 0px;
+    margin: 0px
+}
+
+.rd-main-links ul li {
+    display: inline-block;
+    width: 30%;
+}
+
+.rd-main-links ul li a {
+    color: #FFB703;
+}
+
+.rd-main-links ul li a:visited {
+    color: #FB8500;
+}
+
+.rd-main-links ul li .rd-link-icon {
+    display: block;
+}
+
+.rd-main-links ul li .rd-link-text {
+    display: block;
+}
+
+.rd-section {
+    padding: 0.25em 0.5em;
+}
+
+.rd-section h1, .rd-section h2, .rd-section h3, .rd-section h4 {
+    color: #FB8500;
+}
+
+.rd-section.rd-light-blue {
+    background: #8ECAE6;
+    color: #000000;
+}
+
+.rd-section.rd-light-blue h1, .rd-section.rd-light-blue h2, .rd-section.rd-light-blue h3, .rd-section.rd-light-blue h4 {
+    color: #023047;
+}
+
+img.rd-responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Small screens (phones) */
+@media only screen and (min-width: 576px) {
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large screens (desktops, laptops) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large screens (large desktops) */
+@media only screen and (min-width: 1200px) {
+}
+
