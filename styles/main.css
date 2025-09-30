@@ -2,19 +2,20 @@
 Color palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
 */
 
-/* Base styles (applies to all screen sizes) */
+/* ----------------------------------------------------------------
+ * Base styles applies to all screen sizes
+ * ---------------------------------------------------------------*/
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 40px;
+  font-size: 13px;
 }
 
 h1, h2, h3, h4 {
     color: #219EBC;
 }
 
+/* ----------------------------------------------------------------
+ * Hero image
+ * ---------------------------------------------------------------*/
 .rd-hero {
     background: #023047;
 }
@@ -32,33 +33,33 @@ h1, h2, h3, h4 {
     color: #FFB703;
 }
 
-.rd-main-links ul {
+/* ----------------------------------------------------------------
+ * Main navigation links
+ * ---------------------------------------------------------------*/
+.rd-main-links .rd-main-link {
     text-align: center;
-    padding: 0px;
-    margin: 0px
 }
 
-.rd-main-links ul li {
-    display: inline-block;
-    width: 30%;
-}
-
-.rd-main-links ul li a {
+.rd-main-links a {
     color: #FFB703;
 }
 
-.rd-main-links ul li a:visited {
+.rd-main-links a:visited {
     color: #FB8500;
 }
 
-.rd-main-links ul li .rd-link-icon {
+
+.rd-main-links .rd-link-icon {
     display: block;
 }
 
-.rd-main-links ul li .rd-link-text {
+.rd-main-links .rd-link-text {
     display: block;
 }
 
+/* ----------------------------------------------------------------
+ * Content sections
+ * ---------------------------------------------------------------*/
 .rd-section {
     padding: 0.25em 0.5em;
 }
@@ -76,59 +77,37 @@ h1, h2, h3, h4 {
     color: #023047;
 }
 
-img.rd-responsive-img {
-    max-width: 100%;
-    height: auto;
+#rd-group-photo {
+    max-width: 50em;
+    width: 100%;
 }
 
-/* Small screens (phones) */
-@media only screen and (min-width: 576px) {
+/* ----------------------------------------------------------------
+ * RESPONSIVE - Tablet and Up
+ * ---------------------------------------------------------------*/
+@media (min-width: 568px) {
     body {
-        font-size: 30px;
+        font-size: 16px;
     }
 }
 
-/* Medium screens (tablets) */
-@media only screen and (min-width: 768px) {
-    body {
-        font-size: 20px;
-        margin: 0em 5em;
-    }
-
-    #rd-group-photo {
-        float: right;
-        width: 20em;
-        margin-bottom: 2em;
-    }
-}
-
-/* Large screens (desktops, laptops) */
-@media only screen and (min-width: 992px) {
+/* ----------------------------------------------------------------
+ * RESPONSIVE - Desktop and Up
+ * ---------------------------------------------------------------*/
+@media (min-width: 768px) {
     body {
         font-size: 20px;
-        margin: 0em auto;
-        max-width: 90%;
-    }
-
-    #rd-group-photo {
-        float: right;
-        width: 20em;
-        margin-bottom: 2em;
+        margin: 0px 10%;
     }
 }
 
-/* Extra large screens (large desktops) */
-@media only screen and (min-width: 1200px) {
+/* ----------------------------------------------------------------
+ * Monitor and Up
+ * ---------------------------------------------------------------*/
+@media (min-width: 1280px) {
     body {
-        font-size: 15px;
-        margin: 0em auto;
-        max-width: 1200px;
-    }
-
-    #rd-group-photo {
-        float: right;
-        width: 20em;
-        margin-bottom: 2em;
+        font-size: 24px;
+        margin: 0px 20%;
     }
 }
 
