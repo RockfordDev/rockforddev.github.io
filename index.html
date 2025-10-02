@@ -2,24 +2,30 @@
 <html>
     <head>
         <title>Rockford Dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- OG Data -->
         <meta property="og:title" content="Rockford Dev" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rockforddev.com" />
         <meta property="og:image" content="https://rockforddev.com/img/group-photo.jpg" />
+
         <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
         <div class="rd-hero">
-                        <div class="rd-hero-content">
-                            <h1>Rockford Dev</h1>
-                            <p>A local meetup for Software Developers in Rockford IL</p>
-                        </div>
+            <div class="rd-hero-content">
+                <h1>Rockford Dev</h1>
+                <p>A local meetup for Software Developers in Rockford IL</p>
+            </div>
         </div>
-        <div class="rd-main-links rd-section">
-            <ul>
-                <li>
+        <section id="main-content">
+            <div class="rd-main-links rd-section pure-g">
+                <div class="rd-main-link pure-u-1-3">
                     <a href="https://discord.gg/HPxXmEwxKV">
                         <span class="rd-link-icon">
                             <!-- discord icon by Free Icons (https://free-icons.github.io/free-icons/) -->
@@ -31,8 +37,8 @@
                         </span>
                         <span class="rd-link-text">Discord</span>
                     </a>
-                </li>
-                <li>
+                </div>
+                <div class="rd-main-link pure-u-1-3">
                     <a href="https://github.com/RockfordDev">
                         <span class="rd-link-icon">
                              <!-- github icon by Free Icons (https://free-icons.github.io/free-icons/) -->
@@ -44,8 +50,8 @@
                         </span>
                         <span class="rd-link-text">Github</span>
                     </a>
-                </li>
-                <li>
+                </div>
+                <div class="rd-main-link pure-u-1-3">
                     <a href="https://groups.google.com/g/rockforddev">
                         <span class="rd-link-icon">
                             <!-- user-group icon by Free Icons (https://free-icons.github.io/free-icons/) -->
@@ -57,9 +63,8 @@
                         </span>
                         <span class="rd-link-text">Google Groups</span>
                     </a>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </div>
 
         <div class="rd-section rd-light-blue">
             <h2>Upcoming Meetups</h2>
@@ -79,20 +84,29 @@
                 <li>2025-02-19: <a href="https://www.eventbrite.com/e/rockford-dev-february-meetup-how-i-drew-my-family-tree-tickets-1234938918549">Rockford Dev February Meetup - How I Drew my Family Tree</a></li>
             </ul>
         </div>
-        <div class="rd-section">
-            <h2>About Us</h2>
-            <p>Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in 2024, this group strives to promote professional development and technical learning. We meet on the third Wednesday of every month at 6PM, on the second floor of the Rockford Public Library Main branch, in the WREX classroom.</p>
-            <img id="rd-group-photo" class="rd-responsive-img" src="img/group-photo.jpg" alt="A photo of five members of the group in the Maker Lab">
-            <p>Rockford Dev meetups often include an educational lecture or topic of discussion. Some of our past lecture topics have included:</p>
-            <ul>
-                <li>GraphVis</li>
-                <li>Duplicate customer accounts</li>
-                <li>Google AppScript</li>
-                <li>The Fediverse</li>
-                <li>Creating this website</li>
-            </ul>
 
-            <p>If you would like to host a lecture, please email <a href="mailto:rockforddev@googlegroups.com">rockforddev@googlegroups.com</a> with a suggested outline.</p>
-        </div>
+            <div class="rd-section pure-g">
+                <div class="rd-about-text pure-u-1 pure-u-lg-1-2 pure-u-xl-2-3">
+                    <h2>About Us</h2>
+                    <p>Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in 2024, this group strives to promote professional development and technical learning. We meet on the third Wednesday of every month at 6PM, on the second floor of the Rockford Public Library Main branch, in the WREX classroom.</p>
+                    <p>Rockford Dev meetups often include an educational lecture or topic of discussion. Some of our past lecture topics have included:</p>
+                    <ul>
+                        <li>GraphVis</li>
+                        <li>Duplicate customer accounts</li>
+                        <li>Google AppScript</li>
+                        <li>The Fediverse</li>
+                        <li>Creating this website</li>
+                    </ul>
+
+                    <p>If you would like to host a lecture, please email <a href="mailto:rockforddev@googlegroups.com">rockforddev@googlegroups.com</a> with a suggested outline.</p>
+                </div>
+
+                <div class="rd-about-img pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
+                    <img id="rd-group-photo" class="pure-img" src="img/group-photo.jpg" alt="A photo of five members of the group in the Maker Lab">
+                </div>
+            </div>
+
+        </section>
+
     </body>
 </html>
