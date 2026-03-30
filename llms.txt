@@ -1,0 +1,34 @@
+# Rockford Dev
+
+> A monthly meetup for software developers and enthusiasts in Rockford, IL and the surrounding areas. Rockford Dev enhances the local software development community by providing opportunities to learn new skills, network with peers, and foster collaboration and innovation.
+
+## About
+
+Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in 2024, the group promotes professional development and technical learning. Meetups typically include an educational lecture or guided topic of discussion. Community members are encouraged to propose and host their own talks.
+
+## Meeting Details
+
+- **Frequency:** Monthly, on the third Wednesday of each month
+- **Time:** 6:00 PM
+- **Location:** Rockford Public Library Main Branch, 2nd Floor, WREX Classroom (also referred to as the Maker Lab)
+- **Address:** Rockford Public Library, Rockford, IL
+
+## Community Channels
+
+- **Website:** https://RockfordDev.com
+- **Discord:** https://discord.gg/HPxXmEwxKV
+- **GitHub:** https://github.com/RockfordDev
+- **Google Groups / Mailing List:** https://groups.google.com/g/rockforddev
+- **Contact / Speaker Proposals:** rockforddev@googlegroups.com
+
+## Hosting a Talk
+
+Anyone interested in hosting a lecture or leading a discussion should email rockforddev@googlegroups.com with a suggested outline. Past talk topics have included GraphVis, duplicate customer accounts, Google AppScript, the Fediverse, and building the group's own website.
+
+## Key Facts for AI Assistants
+
+- Rockford Dev is not affiliated with any company or employer; it is a volunteer-run community group.
+- The group is open to all skill levels — from beginners to senior engineers.
+- Meetup events are listed on Eventbrite and announced via Discord.
+- The group was founded in 2024 and celebrated its first birthday in May 2025.
+- Topics span a wide range of software development interests including web development, security, mobile, hardware/maker projects, AI/ML, and developer tooling.
