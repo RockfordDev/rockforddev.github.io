@@ -1,120 +1,389 @@
-/**
-Color palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
-*/
+/* ── Design Tokens ─────────────────────────────────── */
+:root {
+    --bg:          #0f1117;
+    --bg-card:     #181c27;
+    --bg-lift:     #1e2333;
+    --border:      #2a3045;
+    --text:        #cdd5e0;
+    --text-muted:  #6b7a99;
+    --accent:      #f5a623;
+    --accent-dim:  #b87a18;
+    --accent-glow: rgba(245, 166, 35, 0.15);
+    --radius:      8px;
+    --mono:        'JetBrains Mono', monospace;
+    --serif:       'Source Serif 4', Georgia, serif;
+}
 
-/* ----------------------------------------------------------------
- * Base styles applies to all screen sizes
- * ---------------------------------------------------------------*/
+/* ── Base overrides on top of Pure ────────────────── */
+html { scroll-behavior: smooth; }
+
 body {
-  font-size: 13px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
 }
 
-h1, h2, h3, h4 {
-    color: #219EBC;
+/* Override Pure's default link colour */
+a         { color: var(--accent); text-decoration: none; }
+a:hover   { text-decoration: underline; }
+a:visited { color: var(--accent); }
+
+/* ── Dot-grid background ───────────────────────────── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+    linear-gradient(rgba(245,166,35,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,166,35,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
 }
 
-/* ----------------------------------------------------------------
- * Hero image
- * ---------------------------------------------------------------*/
-.rd-hero {
-    background: #023047;
+/* ── Page wrapper ──────────────────────────────────── */
+/* Pure's .pure-g / .pure-u handle responsive columns.
+.l-wrap just adds the max-width + side padding.       */
+.l-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
 }
 
-.rd-hero-content {
-    text-align: center;
-    padding: 5em 2em;
+/* ══════════════════════════════════════════════════
+HERO
+════════════════════════════════════════════════════ */
+.hero {
+    padding: 72px 0 52px;
+    border-bottom: 1px solid var(--border);
 }
 
-.rd-hero-content h1 {
-    color: #FB8500;
+.hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
 }
 
-.rd-hero-content p {
-    color: #FFB703;
+h1 {
+    font-family: var(--mono);
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+}
+h1 .accent { color: var(--accent); }
+
+.hero-tagline {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 28px;
+    max-width: 500px;
 }
 
-/* ----------------------------------------------------------------
- * Main navigation links
- * ---------------------------------------------------------------*/
-.rd-main-links .rd-main-link {
-    text-align: center;
+/* Community link buttons inside a Pure grid row */
+.community-links {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+.community-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    color: var(--text);
+    margin: 0 6px 8px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.community-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-glow);
+    text-decoration: none;
+}
+.community-link svg {
+    width: 14px; height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
-.rd-main-links a {
-    color: #FFB703;
+/* ══════════════════════════════════════════════════
+SECTION CHROME
+════════════════════════════════════════════════════ */
+.section { padding-top: 52px; }
+
+.section-label {
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
 }
 
-.rd-main-links a:visited {
-    color: #FB8500;
+h2 {
+    font-family: var(--mono);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 18px;
 }
 
+/* ══════════════════════════════════════════════════
+UPCOMING EVENT CARD
+════════════════════════════════════════════════════ */
+.event-card-next {
+    background: var(--bg-card);
+    border: 1px solid var(--accent-dim);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
+}
+.event-card-next::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at 100% 0%, var(--accent-glow), transparent 70%);
+    pointer-events: none;
+}
+.event-badge {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-dim);
+    border-radius: 4px;
+    padding: 2px 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.event-title {
+    font-family: var(--mono);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 6px;
+    line-height: 1.4;
+}
+.event-meta {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin: 0 0 18px;
+}
+.event-meta strong { color: var(--text); }
 
-.rd-main-links .rd-link-icon {
-    display: block;
+/* ══════════════════════════════════════════════════
+PURE BUTTON OVERRIDES
+Pure's .pure-button handles base reset;
+we layer our design tokens on top.
+════════════════════════════════════════════════════ */
+.pure-button.btn-primary {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #0f1117;
+    border: none;
+    transition: background 0.2s, transform 0.15s;
+}
+.pure-button.btn-primary:hover {
+    background: #f9bc54;
+    transform: translateY(-1px);
+    text-decoration: none;
 }
 
-.rd-main-links .rd-link-text {
-    display: block;
+.pure-button.btn-outline {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    transition: background 0.2s;
+}
+.pure-button.btn-outline:hover {
+    background: var(--accent-glow);
+    text-decoration: none;
 }
 
-/* ----------------------------------------------------------------
- * Content sections
- * ---------------------------------------------------------------*/
-.rd-section {
-    padding: 0.25em 0.5em;
+/* ══════════════════════════════════════════════════
+PAST MEETUPS LIST
+════════════════════════════════════════════════════ */
+.meetup-list {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+.meetup-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 9px 12px;
+    border-radius: var(--radius);
+    transition: background 0.15s;
+}
+.meetup-list li:hover { background: var(--bg-lift); }
+
+.meetup-date {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+.meetup-list a {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.4;
+}
+.meetup-list a:hover {
+    color: var(--accent);
+    text-decoration: none;
 }
 
-.rd-section h1, .rd-section h2, .rd-section h3, .rd-section h4 {
-    color: #FB8500;
+/* ══════════════════════════════════════════════════
+ABOUT — Pure responsive grid columns
+pure-u-1        full width on xs/sm
+pure-u-lg-3-5   60 % text column at lg+
+pure-u-lg-2-5   40 % photo column at lg+
+════════════════════════════════════════════════════ */
+.about-text-col { padding-right: 28px; }
+
+@media (max-width: 1023px) {
+    .about-text-col  { padding-right: 0; }
+    .about-photo-col { padding-top: 24px; }
 }
 
-.rd-section.rd-light-blue {
-    background: #8ECAE6;
-    color: #000000;
+.about-text p {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0 0 14px;
 }
+.about-text strong { color: #fff; }
 
-.rd-section.rd-light-blue h1, .rd-section.rd-light-blue h2, .rd-section.rd-light-blue h3, .rd-section.rd-light-blue h4 {
-    color: #023047;
-}
-
-#rd-group-photo {
-    max-width: 50em;
+.about-photo img {
     width: 100%;
+    display: block;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+.about-photo figcaption {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
 }
 
-/* ----------------------------------------------------------------
- * RESPONSIVE - Tablet and Up
- * ---------------------------------------------------------------*/
-@media (min-width: 568px) {
-    body {
-        font-size: 16px;
-    }
+/* Topic tags */
+.topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+.tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: var(--bg-lift);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
 }
 
-/* ----------------------------------------------------------------
- * RESPONSIVE - Desktop and Up
- * ---------------------------------------------------------------*/
-@media (min-width: 768px) {
-    body {
-        font-size: 20px;
-    }
-    
-    #main-content {
-        margin: auto 2em;
-    }
+/* ══════════════════════════════════════════════════
+CTA BOX
+════════════════════════════════════════════════════ */
+.cta-box {
+    margin-top: 52px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    text-align: center;
+}
+.cta-box p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0 0 16px;
 }
 
-/* ----------------------------------------------------------------
- * Monitor and Up
- * ---------------------------------------------------------------*/
-@media (min-width: 1280px) {
-    body {
-        font-size: 24px;
-    }
-
-    #main-content {
-        margin: auto;
-        max-width: 1280px;
-    }
+/* ══════════════════════════════════════════════════
+FOOTER — Pure grid two-column split
+pure-u-1        stacked on xs
+pure-u-md-1-2   side-by-side at md+
+════════════════════════════════════════════════════ */
+.site-footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
 }
+.footer-left  { text-align: left; }
+.footer-right { text-align: right; }
+@media (max-width: 767px) {
+    .footer-right { text-align: left; margin-top: 4px; }
+}
+
+/* ── Entrance animations ─────────────────────────── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.hero                   { animation: fadeUp 0.5s ease both; }
+.section:nth-of-type(1) { animation: fadeUp 0.5s 0.10s ease both; }
+.section:nth-of-type(2) { animation: fadeUp 0.5s 0.20s ease both; }
+.section:nth-of-type(3) { animation: fadeUp 0.5s 0.30s ease both; }
+.cta-box                { animation: fadeUp 0.5s 0.40s ease both; }
+.site-footer            { animation: fadeUp 0.5s 0.45s ease both; }
 
