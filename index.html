@@ -76,6 +76,57 @@
   -->
 
   <!-- ══════════════════════════════════════════════════
+       ABOUT
+       Pure responsive grid:
+         pure-u-1       = 100% on xs/sm/md
+         pure-u-lg-3-5  = 60% text col at 1024px+
+         pure-u-lg-2-5  = 40% photo col at 1024px+
+  ═════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="about-heading">
+    <p class="section-label" id="about-heading">About</p>
+
+    <div class="pure-g">
+
+      <!-- Text column -->
+      <div class="pure-u-1 pure-u-lg-5-5 about-text-col">
+        <div class="about-text">
+          <p>Rockford Dev exists to strengthen the software development community in Rockford, Illinois and the surrounding region. We bring together developers and technology enthusiasts of all skill levels to learn new skills, build meaningful professional connections, and foster collaboration and innovation. Through monthly meetups featuring educational talks, open discussions, and project showcases, we create a welcoming space where members can grow their craft, share knowledge, and support one another's professional development.</p>
+          <p>We meet on the <strong>third Wednesday of every month at 6 PM</strong> on the second floor of the Rockford Public Library Main Branch, in the Maker Lab.</p>
+          <div class="topic-tags">
+            <span class="tag">GraphVis</span>
+            <span class="tag">Google AppScript</span>
+            <span class="tag">The Fediverse</span>
+            <span class="tag">Duplicate Customer Accounts</span>
+            <span class="tag">Creating This Website</span>
+            <span class="tag">OWASP Top 10</span>
+            <span class="tag">APK Reverse Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo column -->
+      <div class="pure-u-1 pure-u-lg-4-5 about-photo-col">
+        <figure class="about-photo">
+          <img src="/img/group-photo.jpg"
+               alt="Five members of Rockford Dev gathered in the Maker Lab" />
+          <figcaption>Members at the Maker Lab, Rockford Public Library</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SPEAK CTA
+  ═════════════════════════════════════════════════════ -->
+  <div class="cta-box">
+    <p>Interested in giving a talk or demo at a future meetup?</p>
+    <a class="pure-button btn-outline" href="mailto:rockforddev@googlegroups.com">
+      Propose a Talk →
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
        PAST MEETUPS
   ═════════════════════════════════════════════════════ -->
   <section class="section" aria-labelledby="past-heading">
@@ -104,58 +155,6 @@
       <li><span class="meetup-date">2025-02-19</span><a href="https://www.eventbrite.com/e/rockford-dev-february-meetup-how-i-drew-my-family-tree-tickets-1234938918549">February Meetup — How I Drew My Family Tree</a></li>
     </ul>
   </section>
-
-  <!-- ══════════════════════════════════════════════════
-       ABOUT
-       Pure responsive grid:
-         pure-u-1       = 100% on xs/sm/md
-         pure-u-lg-3-5  = 60% text col at 1024px+
-         pure-u-lg-2-5  = 40% photo col at 1024px+
-  ═════════════════════════════════════════════════════ -->
-  <section class="section" aria-labelledby="about-heading">
-    <p class="section-label" id="about-heading">About</p>
-
-    <div class="pure-g">
-
-      <!-- Text column -->
-      <div class="pure-u-1 pure-u-lg-3-5 about-text-col">
-        <div class="about-text">
-          <p>Rockford Dev is a local group for software developers and enthusiasts in Rockford, Illinois. Founded in 2024, we strive to promote professional development, technical learning, and real human connection.</p>
-          <p>We meet on the <strong>third Wednesday of every month at 6 PM</strong> on the second floor of the Rockford Public Library Main Branch, in the Maker Lab.</p>
-          <p>Our meetups include educational talks, open discussions, and project showcases. Some past topics:</p>
-          <div class="topic-tags">
-            <span class="tag">GraphVis</span>
-            <span class="tag">Google AppScript</span>
-            <span class="tag">The Fediverse</span>
-            <span class="tag">Duplicate Customer Accounts</span>
-            <span class="tag">Creating This Website</span>
-            <span class="tag">OWASP Top 10</span>
-            <span class="tag">APK Reverse Engineering</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Photo column -->
-      <div class="pure-u-1 pure-u-lg-2-5 about-photo-col">
-        <figure class="about-photo">
-          <img src="/img/group-photo.jpg"
-               alt="Five members of Rockford Dev gathered in the Maker Lab" />
-          <figcaption>Members at the Maker Lab, Rockford Public Library</figcaption>
-        </figure>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       SPEAK CTA
-  ═════════════════════════════════════════════════════ -->
-  <div class="cta-box">
-    <p>Interested in giving a talk or demo at a future meetup?</p>
-    <a class="pure-button btn-outline" href="mailto:rockforddev@googlegroups.com">
-      Propose a Talk →
-    </a>
-  </div>
 
   <!-- ══════════════════════════════════════════════════
        FOOTER
